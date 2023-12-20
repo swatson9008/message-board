@@ -1,5 +1,13 @@
-extends layout
 
-block content
-  h1= title
-  p Welcome to #{title}
+html
+  head
+    title= title
+  body
+    h1= title
+
+    a(href='/new') New Message
+    each message in messages
+      .message
+        p User: #{message.user}
+        p Text: #{message.text}
+        p Date: #{message.added} 

@@ -1,0 +1,13 @@
+html
+  head
+    title= title
+  body
+    h1= title
+    form(method="POST" action="/new")
+      label(for="author") Author:
+      input(type="text" id="author" name="author" required)
+      br
+      label(for="message") Message:
+      textarea(id="message" name="message" rows="4" required)
+      br
+      input(type="submit" value="Submit Message")
